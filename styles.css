@@ -1,0 +1,269 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    /* font-family: ; */
+}
+
+body {
+    background-color: #90CDE6;
+    font-family: 'Passion One', cursive;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+#cash-register-div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 2;
+    /* justify-self: center; */
+}
+
+#cash-register-drawer-div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 1;
+    /* margin-top: 50%; */
+    /* justify-self: center; */
+}
+
+/* img {
+    max-width: 75%;
+    justify-content: center;
+} */
+
+#cash-on-hand-div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    justify-self: center;
+    align-self: center;
+    z-index: 7;
+    margin-right: 50%;
+    margin-bottom: 10%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+#user-input-div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 3;
+    justify-self: center;
+    align-self: center;
+    margin-bottom: 7%;
+}
+
+
+input {
+    display: block;
+    padding: 5%;
+    margin: 5% 0;
+}
+
+#change-due-div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 4;
+    justify-self: end;
+    align-self: end;
+    margin-right: 17%;
+    margin-bottom: 29%;
+}
+
+#buttons-div {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    z-index: 5;
+    justify-self: center;
+    align-self: end;
+    /* margin-right: 15%; */
+    margin-bottom: 5%;
+    width: 100%;
+
+}
+
+button {
+    padding: 1%;
+    background: rgb(26, 184, 26);
+    border: none;
+    font-family: inherit;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#enter-button {
+    margin-left: 40%;
+    margin-bottom: 17%;
+    /* justify-self: center; */
+}
+
+button:hover {
+    border: 1px solid black;
+}
+
+/* ======= Animations ======== */
+
+.slide-open-animation {
+    animation-name: slide-open;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    /* animation-iteration-count: infinite; */
+    /* animation-direction: alternate; */
+}
+
+
+.slide-closed-animation {
+    animation-name: slide-closed;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-direction: reverse;
+}
+
+@keyframes slide-open {
+    100% {
+        transform: translateY(70%);
+    }
+}
+
+@keyframes slide-closed {
+    100% {
+        transform: translateY(70%);
+    }
+}
+
+/* This will help - https://css-tricks.com/restart-css-animation/ */
+
+
+
+
+/* ======= Media queries ======== */
+
+@media screen and (max-width: 991px) {
+
+    #cash-register-div {
+        /* display: -moz-inline-grid; */
+        display: flex;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        /* z-index: 2; */
+        justify-content: center;
+        max-width: 100%;
+        /* max-width: 100%; */
+    }
+    
+    #cash-register-drawer-div {
+        display: flex;
+        grid-column: 1 / 4;
+        grid-row: 1 / 2;
+        /* z-index: 1; */
+        /* margin-top: 50%; */
+        justify-content: center;
+        max-width: 100%;
+        /* max-width: 100%; */
+    }
+
+    img {
+        width: 75%;
+        justify-self: center;
+    }
+
+    #cash-on-hand-div {
+        justify-self: start;
+        align-self: center;
+        margin-bottom: 10%;
+    }
+
+    #change-due-div {
+        margin-right: 1%;
+        margin-bottom: 43%;
+    }
+    
+    #buttons-div {
+        margin-bottom: 17%;
+        width: 100%;   
+    }
+}
+
+@media screen and (max-width: 767px) {
+
+
+    #change-due-div {
+        margin-right: 1%;
+        margin-bottom: 38%;
+    }
+
+    #buttons-div {
+        margin-bottom: 15%;
+        margin-right: 10%;  
+    }
+
+}
+
+@media screen and (max-width: 479px) {
+    
+    img {
+        width: 100%;
+        justify-self: center;
+    }
+
+
+
+    input {
+        padding: 1%;
+        width: 50%;
+    }
+
+    li {
+        font-size: .75rem;
+    }
+
+    #cash-on-hand-div {
+        grid-column: 1 / 4;
+        /* margin-right: 55%; */
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+
+    #user-input-div {
+        grid-column: 1 / 4;
+        justify-content: center;
+        align-self: center;
+        margin-bottom: 7%;
+        margin-left: 14%;
+    }
+
+    input {
+        justify-self: center;
+        /* margin-left: 50%; */
+    }
+
+    #change-due-div {
+        grid-column: 1 / 4;
+        align-content: center;
+        margin-top: 33%;
+        margin-right: 15%;
+    }
+
+    #buttons-div {
+        margin-bottom: 50%;
+        margin-right: 30%;
+    }
+
+
+    @keyframes slide-open {
+        100% {
+            transform: translateY(55%);
+        }
+    }
+
+
+
+}

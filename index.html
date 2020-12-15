@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css" type="text/css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700&display=swap" rel="stylesheet">
+
+
+        <title>Cash Register</title>
+    </head>
+    <body>
+        
+        <main>
+            <!-- <h1>Cash Register</h1> -->
+
+            <!-- The image will be a top down view of a chas register
+                and when the price is submitted the function will run 
+                and return the results. Like an tablet screen on top 
+                of the actual cash register. Once completed, the "drawer"
+                will come out and display the results. "Here's your change!" -->
+
+            <!-- I'll create these image assets in Affinity Designer -->
+
+
+            <div id="cash-register-div">
+                <img src="https://dl.dropbox.com/s/qgj0mpnvy8gc1p6/Cash%20Register%20base.svg?" alt="Cash register base">
+            </div>
+
+            <div id="cash-register-drawer-div">
+                <img src="https://dl.dropbox.com/s/03zsmv1zmo7gl9e/Cash%20Register%20Drawer.svg?" alt="Cash register drawer">
+            </div>
+
+            <div id="cash-on-hand-div">
+                <p>Cash on Hand</p>
+                <hr>
+                <ul id="cash-on-hand-list">
+                    <li>$100: <span id="hundreds"></span></li>
+                    <li>$20: <span id="twenties"></span></li>
+                    <li>$10: <span id="tens"></span></li>
+                    <li>$5: <span id="fives"></span></li>
+                    <li>$1: <span id="ones"></span></li>
+                    <hr>
+                    <li>¢.25: <span id="quarters"></span></li>
+                    <li>¢.10: <span id="dimes"></span></li>
+                    <li>¢.05: <span id="nickels"></span></li>
+                    <li>¢.01: <span id="pennies"></span></li>
+                </ul>
+            </div>
+
+            <div id="user-input-div">
+                <label for="">Item Price</label>
+                <input type="number" id="item-price">
+                <label for="">Cash Given</label>
+                <input type="number" id="cash-given">
+            </div>
+
+            <div id="change-due-div">
+                <p>Change due: $<span id="change-due-value">0</span></p>
+                <hr>
+                <ul id="change-due-list">
+                    <li>$100: <span id="hundreds-due">0</span></li>
+                    <li>$20: <span id="twenties-due">0</span></li>
+                    <li>$10: <span id="tens-due">0</span></li>
+                    <li>$5: <span id="fives-due">0</span></li>
+                    <li>$1: <span id="ones-due">0</span></li>
+                    <hr>
+                    <li>¢.25: <span id="quarters-due">0</span></li>
+                    <li>¢.10: <span id="dimes-due">0</span></li>
+                    <li>¢.05: <span id="nickels-due">0</span></li>
+                    <li>¢.01: <span id="pennies-due">0</span></li>
+                </ul>
+            </div>
+
+            <div id="buttons-div">
+                <button id="enter-button">Open</button>
+                <button id="close-button">Close</button>
+            </div>
+
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.1/howler.min.js" 
+                integrity="sha512-L6Z/YtIPQ7eU3BProP34WGU5yIRk7tNHk7vaC2dB1Vy1atz6wl9mCkTPPZ2Rn1qPr+vY2mZ9odZLdGYuaBk7dQ==" 
+                crossorigin="anonymous">
+        </script>
+        <script src="scripts.js"></script>
+        
+    </body>
+</html>
